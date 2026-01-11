@@ -81,6 +81,7 @@ window.onload = async function () {
               dataZombies.push(formattedWaveZombie)
             })
           }
+        } else if (objClass === 'RaidingPartyZombieSpawnerProps') {
         }
       })
 

@@ -73,7 +73,7 @@ window.onload = async function () {
           if (waveZombies != null) {
             waveZombies.forEach(function (waveZombie) {
               let row = waveZombie['Row']
-              let count = extractRTID(waveZombie['Type'])
+              let type = extractRTID(waveZombie['Type'])
               let formattedWaveZombie = {
                 'type': type,
                 'row': row == null ? 999 : row

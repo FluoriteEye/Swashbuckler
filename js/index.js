@@ -82,6 +82,18 @@ window.onload = async function () {
             })
           }
         } else if (objClass === 'RaidingPartyZombieSpawnerProps') {
+          let waveZombies = getObjData(waveObject, 'Zombies')
+          if (waveZombies != null) {
+            waveZombies.forEach(function (waveZombie) {
+              let row = waveZombie['Row']
+              let type = extractRTID(waveZombie['Type'])
+              let formattedWaveZombie = {
+                'type': type,
+                'row': row == null ? 999 : row
+              }
+              dataZombies.push(formattedWaveZombie)
+            })
+          }
         }
       })
 
